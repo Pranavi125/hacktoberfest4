@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motivational Quote Generator 💫</title>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #333;
+      margin: 0;
+    }
+
+    .container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 500px;
+      transition: all 0.3s ease;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: #0077ff;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin: 20px 0;
+      color: #444;
+      min-height: 60px;
+    }
+
+    button {
+      background: #0077ff;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #005cd4;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>🌟 Motivational Quotes 🌟</h1>
+    <p id="quote">Click the button below to get inspired!</p>
+    <button onclick="newQuote()">✨ New Quote</button>
+  </div>
+
+  <footer>
+    Created with ❤️ for Hacktoberfest
+  </footer>
+
+  <script>
+    const quotes = [
+      "Believe in yourself and all that you are.",
+      "Dream big. Work hard. Stay humble.",
+      "Success doesn’t just find you. You have to go out and get it.",
+      "The harder you work for something, the greater you’ll feel when you achieve it.",
+      "Don’t watch the clock; do what it does. Keep going.",
+      "Your only limit is your mind.",
+      "Push yourself, because no one else is going to do it for you."
+    ];
+
+    function newQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").textContent = quotes[randomIndex];
+    }
+  </script>
+</body>
+
+</html>
